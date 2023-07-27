@@ -1,2 +1,2 @@
 # .github
-MOE-6502-SOC Goals &amp; Philosiphy
+This repository is used for public description of the organization via [profile/README.md](./profile/README.md).
