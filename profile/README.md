@@ -19,19 +19,18 @@ learning tool for those who want a different perspective or who want to dive
 deeper into "Computer Architecture" concepts.
 
 ## SoC Architecture
-For those who don't know, the MOS 6502 Processor is not like a modern microprocessor.
-That is, the 6502 does not contain any on-board flash, memory, or registers for
-direct external device interfacing. Thus, the SoC implementation contains the
-following components to give the user a functioning 6502 system *(Thus the title*
-*system on a chip):*
+The SoC implementation contains thefollowing components to give the user a 
+functioning 6502 system *(Thus the title system on a chip)*:
 <!-- TODO: Add links to these. -->
   - [6502 Implementation]()
   \- Modeled after the [W65C02S](https://eater.net/datasheets/w65c02s.pdf)
-  processor. This is not the original [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502),
-  but it is certainly close enough.
+  processor. Note, this is not the original [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502).
+    - This implementation is not pin-for-pin the same as the W65C02S. For example, due to the lack of
+internal tri-states in most modern FPGAs, the memory data bus of the processor as is can not be implemented;
+instead, a more FPGA friendly memory bus implementation is used, Wishbone. For further details of differences
+between the this component and what is shown in the data-sheet, see the documentation for this component.
   - [Memory Implementation]()
-  \- Modeled after the [hm62256b](https://eater.net/datasheets/hm62256b.pdf)
-  32k x 8 SRAM.
+  \- TODO: Not yet, decided.
   - [Versatile Interface Adapter (VIA)]()
   \- Modeled after the [W65C22](https://eater.net/datasheets/w65c22.pdf). This
   is a component that allows a designer to perform "normal" I/O operations with
